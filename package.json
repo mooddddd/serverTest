@@ -1,0 +1,20 @@
+{
+  "name": "servertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooddddd/serverTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mooddddd/serverTest/issues"
+  },
+  "homepage": "https://github.com/mooddddd/serverTest#readme"
+}
