@@ -11,8 +11,6 @@ socket.on('connect', ()=>{
 
 socket.on("data",(message)=>{
     console.log(`Received : ${message}`)
-
-    socket.end()
 })
 
 // 브라우저가 클라이언트가 되면 더이상 이 파일은 쓰지 않음

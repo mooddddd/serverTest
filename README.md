@@ -109,7 +109,7 @@ socket.on("connect", ()=>{
 
 ```js
 const server = net.createServer((client)=>{
-    console.log(client)
+    console.log(client) // 클라이언트에 대한 정보가 여기 담겨져 있음!
 })
 
 server.on('connection', ()=>{
@@ -121,3 +121,41 @@ server.on('connection', ()=>{
 net은 client와 server가 각각 다른 타입인 메서드가 사용되어야 함
 client는 net.connect()를 써! 여기에 클라이언트를 위한 객체가 담겨있어~~
 server는 net.creatServer() 를 써! 여기에 서버를 위한 객체가 담겨있어~~
+
+
+* 1교시 코드 정리
+client.js
+```js
+const net = require('net')
+const config = {port:3000, host:"127.0.0.1"}
+const socket = net.connect(config)
+
+socket.on("connect", ()=>{
+    console.log("server로부터 온 응답. client는 연결됨")
+
+    socket.write("aaa")
+    socket.write("bbb")
+})
+```
+
+server.js
+```js
+const net = require('net')
+
+const port = precess.env.SERVER_PORT || 3000
+const host = process.env.SERVER_HOST || "127.0.0.1"
+
+const server = net.createServer((client)=>{
+    console.log(client)
+})
+
+server.on('connection', ()=>{
+    console.log("클라이언트 접속")
+
+})
+```
+
+-끝-
+
+
+<2교시 시작>
