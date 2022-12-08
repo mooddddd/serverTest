@@ -197,3 +197,37 @@ socket.on("data",(message)=>{
 
 
 
+<5교시>
+
+``` 메세지의 기본적인 틀
+답변여부
+내용타입
+내용길이
+
+실제내용
+```
+
+### request message 요청메세지 (클라이언트가 서버에게)
+
+```
+reply:true
+content-type:string
+content-length:10
+
+Hello world~
+```
+
+### response message 응답메세지 (서버가 클라이언트에게)
+```
+reply:true
+content-type:strign
+content-length:10
+connection:alive | close
+
+hello world~2
+```
+
+
+1. request message 파일이 만들어지는 과정 정리
+2. 스트링-객체, 객체-스트링 변환시키는 과정 정리
+
