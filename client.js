@@ -18,9 +18,10 @@ socket.on('connect', ()=>{
 
     socket.write(JSON.stringify(message1)) // 스트링으로 만들어주는 메서드
     socket.write(JSON.stringify(message2)) // 스트링으로 넘겨주면 서버에서 다시 객체화 시켜서 처리해줘야 함
-
-    socket.end()
+    socket.write("안농")
 })
+
+
 
 socket.on("data",(message)=>{
     console.log(`Received : ${message}`)

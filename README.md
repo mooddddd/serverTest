@@ -168,7 +168,7 @@ server에서 client로 데이터 보내보기!
 서버가 클라이언트에게 데이터를 던지는 코드
 ```js
 const server = net.createServer((client)=>{
-    client.setEncoding("utf-8")
+    // client.setEncoding("utf-8")
     client.on("data", (data)=>{
         console.log(data)
     })
@@ -187,3 +187,10 @@ socket.on("data",(message)=>{
 클라이언트랑 서버의 포맷은 다를 수 있음
 원하는 것이 다르기 때문에.
 서버는 클라이언트가 요청한 값을 보고 보내줘야 함!
+
+
+<3교시 시작>
+1에서 100까지 출력하세요
+3의 배수일 땐 fizz 출력
+5의 배수일 땐 buzz 출력
+3의 배수면서 5의 배수일 때는 fizzbuzz를 출력하세요
