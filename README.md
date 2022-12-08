@@ -159,3 +159,31 @@ server.on('connection', ()=>{
 
 
 <2교시 시작>
+client.setEncoding("utf-8")
+
+
+server에서 client로 데이터 보내보기!
+`ccc`라는 데이터를 보내보자.
+
+서버가 클라이언트에게 데이터를 던지는 코드
+```js
+const server = net.createServer((client)=>{
+    client.setEncoding("utf-8")
+    client.on("data", (data)=>{
+        console.log(data)
+    })
+
+    client.write("ccc") // 여기!!
+})
+```
+
+client가 server로부터 데이터를 받으면 클라이언트 환경에서 받은 데이터를 출력할 수 있도록 코드를 작성해줌
+```js
+socket.on("data",(message)=>{
+    console.log(`Received : ${message}`)
+})
+```
+
+클라이언트랑 서버의 포맷은 다를 수 있음
+원하는 것이 다르기 때문에.
+서버는 클라이언트가 요청한 값을 보고 보내줘야 함!
